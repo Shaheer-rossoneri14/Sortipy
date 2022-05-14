@@ -19,5 +19,5 @@ Glimpses of the application:
 To-Do:
 1. Create "Save Playlist as New" script.
 2. Create "Overwrite existing playlist" script.
-3. Find workaround for 100 song limit.
+3. Find a fast server to host the app.
 
