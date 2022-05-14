@@ -1,6 +1,8 @@
 # Sortipy
 Sort your Spotify Playlist
 
+Demo: https://sortipy.herokuapp.com/home
+
 Glimpses of the application: 
 
 ![ScreenShot](https://github.com/Shaheer-rossoneri14/Sortipy/blob/main/SS/Screenshot%20from%202022-05-13%2015-23-53.png)
