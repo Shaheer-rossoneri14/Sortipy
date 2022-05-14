@@ -1,0 +1,95 @@
+<html> 
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="../static/css/template.css"> 
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        <title>Sortipy</title>
+	</head>
+	
+	<body>
+        
+        <nav class="navbar navbar-black" style="background-color: #04b434";>
+            <span class="navbar-text">
+              <h1>Welcome to Sortipy!!</h1>
+              <h3>Sort your Spotify playlists by any of a wide range of musical attributes such as tempo, loudness, valence, energy, danceability and more.</h3>
+            </span>
+        </nav><br>
+        
+              <h5>Know your Attributes:</h5> 
+                <ol>
+                    <li><strong>Popularity</strong>
+                        The popularity of the song. The value will be between 0 and 100, with 100 being the most popular. Popularity is calculated by algorithm and is based, in the most part, on the total number of plays the track has had and how recent those plays are.</li>
+                    <li><strong>Danceability</strong><br>
+                        Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable.</li>
+                    <li><strong>Energy</strong><br>
+                        Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy.</li>
+                    <li><strong>Loudness</strong><br>
+                        The overall loudness of a track in decibels (dB). Loudness values are averaged across the entire track and are useful for comparing relative loudness of tracks. Loudness is the quality of a sound that is the primary psychological correlate of physical strength (amplitude). Values typically range between -60 and 0 db.</li>
+                    <li><strong>Acousticness</strong><br>
+                        A confidence measure from 0.0 to 1.0 of whether the track is acoustic. 1.0 represents high confidence the track is acoustic.</li>
+                    <li><strong>Instrumentalness</strong><br>
+                        Predicts whether a track contains no vocals. "Ooh" and "aah" sounds are treated as instrumental in this context. Rap or spoken word tracks are clearly "vocal". The closer the instrumentalness value is to 1.0, the greater likelihood the track contains no vocal content. Values above 0.5 are intended to represent instrumental tracks, but confidence is higher as the value approaches 1.0.</li>
+                    <li><strong>Liveness</strong><br>
+                        Detects the presence of an audience in the recording. Higher liveness values represent an increased probability that the track was performed live. A value above 0.8 provides strong likelihood that the track is live.</li>
+                    <li><strong>Valence</strong><br>
+                        A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).</li>
+                    <li><strong>Tempo</strong><br>
+                        The overall estimated tempo of a track in beats per minute (BPM). In musical terminology, tempo is the speed or pace of a given piece and derives directly from the average beat duration.</li>
+                </ol>
+        
+        <form class="grid" action="/sortipy" method="POST">
+        <center><label for="URL">Enter Playlist URL:</label></center>
+          <input type="text" id="URL" name="URL">
+
+          <center><input class="file_submit" type="submit" value="Submit"></center>
+            <center>
+                <table id = "Table2">
+                    <tr>
+                        {% for col in column_names %}
+                        <th>{{col}}</th>
+                        {% endfor %}
+                    </tr>
+                    {% for row in row_data %}
+                    <tr>
+                        {% for col, row_ in zip(column_names, row) %}
+                        <td>{{row_}}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </table>
+
+        </form>
+        <br>
+<h1>Click on the button to sort your playlist based on any of the attribute given below</h1>  
+<br>  
+        <div class="actions">
+            <a href=/popularity><input type=”button” class='script' name="submit" value=Popularity></a>
+            <a href=/danceability><input type=”button” class='script' name="submit" value=Danceability></a>
+            <a href=/energy><input type=”button” class='script' name="submit" value=Energy></a>
+            <a href=/loudness><input type=”button” class='script' name="submit" value=Loudness></a>
+            <a href=/acousticness><input type=”button” class='script' name="submit" value=Acousticness></a>
+            <a href=/instrumentalness><input type=”button” class='script' name="submit" value=Instrumentalness></a>
+            <a href=/liveness><input type=”button” class='script' name="submit" value=Liveness></a>
+            <a href=/valence><input type=”button” class='script' name="submit" value=Valence></a>
+            <a href=/tempo><input type=”button” class='script' name="submit" value=Tempo></a>
+        </div>
+    </center>
+    <div class="footer-basic">
+        <footer>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="/home">Home</a></li>
+                <li class="list-inline-item"><a href="/about">About</a></li>
+                <li class="list-inline-item"><a href="https://www.linkedin.com/in/shaheer14hasan/">LinkedIn</a></li>
+                <li class="list-inline-item"><a href="https://shaheer-rossoneri14.github.io/">Portfolio</a></li>
+                <li class="list-inline-item"><a href="https://github.com/Shaheer-rossoneri14">GitHub</a></li>
+            </ul>
+            <p class="copyright">Developed By
+                <a href="https://www.linkedin.com/in/shaheer14hasan/">Shaheer Hasan</a> © 2022</p>
+        </footer>
+    </div>
+
+</body>   
+</html>

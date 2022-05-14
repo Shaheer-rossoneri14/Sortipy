@@ -1,0 +1,71 @@
+<html> 
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="../static/css/template.css"> 
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        <title>Sortipy- Acousticness</title>
+	</head>
+	
+	<body>
+        <nav class="navbar navbar-black" style="background-color: #04b434";>
+            <span class="navbar-text">
+                <h1><strong><a style="text-decoration:none; color:inherit;" href="/home" >Sortipy</a></strong></h1>
+              </span>
+        </nav><br>
+        
+              <h5>Songs sorted based on the value of <em>Acousticness</em></h5> 
+                <br>
+        <center>
+                <table id = "Table2">
+                    <tr>
+                        {% for col in column_names %}
+                        <th>{{col}}</th>
+                        {% endfor %}
+                    </tr>
+                    {% for row in row_data %}
+                    <tr>
+                        {% for col, row_ in zip(column_names, row) %}
+                        <td>{{row_}}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </table>
+            
+
+        </form>
+    
+    <br>
+    <h1>Click on the button to sort your playlist based on any of the attribute given below</h1>  
+    <br>  
+    
+        <div class="actions">
+            <a href=/popularity><input type=”button” class='script' name="submit" value=Popularity></a>
+            <a href=/danceability><input type=”button” class='script' name="submit" value=Danceability></a>
+            <a href=/energy><input type=”button” class='script' name="submit" value=Energy></a>
+            <a href=/loudness><input type=”button” class='script' name="submit" value=Loudness></a>
+            <a href=/acousticness ><input type=”button” class='script' name="submit" value=Acousticness></a>
+            <a href=/instrumentalness><input type=”button” class='script' name="submit" value=Instrumentalness></a>
+            <a href=/liveness><input type=”button” class='script' name="submit" value=Liveness></a>
+            <a href=/valence><input type=”button” class='script' name="submit" value=Valence></a>
+            <a href=/tempo><input type=”button” class='script' name="submit" value=Tempo></a>
+        </div>
+    </center>        
+    
+    <div class="footer-basic">
+        <footer>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="/home">Home</a></li>
+                <li class="list-inline-item"><a href="/about">About</a></li>
+                <li class="list-inline-item"><a href="https://www.linkedin.com/in/shaheer14hasan/">LinkedIn</a></li>
+                <li class="list-inline-item"><a href="https://shaheer-rossoneri14.github.io/">Portfolio</a></li>
+                <li class="list-inline-item"><a href="https://github.com/Shaheer-rossoneri14">GitHub</a></li>
+            </ul>
+            <p class="copyright">Developed By
+                <a href="https://www.linkedin.com/in/shaheer14hasan/">Shaheer Hasan</a> © 2022</p>
+        </footer>
+    </div>
+</body>   
+</html>
