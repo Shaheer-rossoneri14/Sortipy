@@ -4,6 +4,7 @@ Sort your Spotify Playlist.
 Sort your Spotify playlists by any of a wide range of musical attributes such as tempo, loudness, valence, energy, danceability and more.
 
 How it works?
+
 After you enter your Playlist URL, the application slices the URL to find the Playlist URI. This playlist URI is then used to collect all the tracks in your playlist using Spotify API.
 After the tracks are selected the attributes of the songs are fetched using the Spotify API and it is displayed in a table.
 The buttons at the bottom of the page sorts the songs in Descending order.
