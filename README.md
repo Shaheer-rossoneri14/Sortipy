@@ -16,33 +16,36 @@ Glimpses of the application:
 
 ![ScreenShot](https://github.com/Shaheer-rossoneri14/Sortipy/blob/main/SS/Screenshot%20from%202022-05-13%2015-23-53.png)
 Screen1
-
-
+<hr/>
+<hr/>
 
 ![ScreenShot](https://github.com/Shaheer-rossoneri14/Sortipy/blob/main/SS/Screenshot%20from%202022-05-13%2015-24-11.png)
 Screen2
-
-
+<hr/>
+<hr/>
 
 ![ScreenShot](https://github.com/Shaheer-rossoneri14/Sortipy/blob/main/SS/Screenshot%20from%202022-05-13%2015-25-14.png)
 Screen3
-
+<hr/>
+<hr/>
 
 
 ![ScreenShot](https://github.com/Shaheer-rossoneri14/Sortipy/blob/main/SS/Screenshot%20from%202022-05-13%2015-25-29.png)
 Screen4
-
+<hr/>
+<hr/>
 
 
 ![ScreenShot](https://github.com/Shaheer-rossoneri14/Sortipy/blob/main/SS/Screenshot%20from%202022-05-13%2015-17-08.png)
 Screen5
-
+<hr/>
+<hr/>
 
 
 ![ScreenShot](https://github.com/Shaheer-rossoneri14/Sortipy/blob/main/SS/Screenshot%20from%202022-05-13%2015-17-53.png)
 Screen6
-
-
+<hr/>
+<hr/>
 To-Do:
 1. Create "Save Playlist as New" script.
 2. Create "Overwrite existing playlist" script.
